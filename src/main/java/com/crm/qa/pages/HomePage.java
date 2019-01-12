@@ -45,7 +45,7 @@ public class HomePage extends crmBase {
 		return new ContactsPage();
 	}
 	
-	public TasksPage clickTasks(){
+	/*public TasksPage clickTasks(){
 		taskLink.click();
 		return new TasksPage();
 	}
@@ -53,7 +53,7 @@ public class HomePage extends crmBase {
 	public DealsPage clickDeals(){
 		dealLink.click();
 		return new DealsPage();
-	}
+	}*/
 	
 	public void clickNewContact(){
 		Actions move = new Actions(driver);

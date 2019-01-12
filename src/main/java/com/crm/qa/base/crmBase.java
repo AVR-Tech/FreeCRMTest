@@ -37,14 +37,14 @@ public class crmBase {
 	}
 
 	public void initialization() {
-		String browserName = prop.getProperty("browser");
+		//String browserName = prop.getProperty("browser");
 
-		if (browserName.equals("chrome")) {
+		if (prop.getProperty("browser").equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
 					"E:\\Vimal\\WebDriver\\workspace\\FreeCRMTest\\drivers\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
-		if (browserName.equals("firefox")) {
+		if (prop.getProperty("browser").equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver",
 					"E:\\Vimal\\WebDriver\\workspace\\FreeCRMTest\\drivers\\chromedriver.exe");
 			driver = new FirefoxDriver();

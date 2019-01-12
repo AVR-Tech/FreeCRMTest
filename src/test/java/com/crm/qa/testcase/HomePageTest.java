@@ -17,7 +17,7 @@ public class HomePageTest extends crmBase {
 	TestUtil tu;
 	ContactsPage cp;
 
-	public HomePageTest() {
+	public HomePageTest(){
 		super();
 	}
 
@@ -55,7 +55,7 @@ public class HomePageTest extends crmBase {
 	@Test(priority = 7)
 	public void clickDealsTest() {
 		tu.switchToFrame();
-		hp.clickDeals();
+		//hp.clickDeals();
 	}
 
 }
