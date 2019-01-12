@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Smoke Suite" >
+<suite name="Smoke Suite">
 
-<listeners>
-<listener class-name="com.crm.qa.reports.ExtentReporterNG"></listener>
-</listeners>
+	<listeners>
+		<listener class-name="com.crm.qa.reports.ExtentReporterNG"></listener>
+	</listeners>
 
-<test name="Smoke Test">
-<classes>
-<!-- 
-<class name="com.crm.qa.testcase.LoginPageTest"></class>
-<class name="com.crm.qa.testcase.HomePageTest"></class> -->
-<class name= "com.crm.qa.testcase.ContactsPageTest"></class>
+	<test name="Smoke Test">
 
-</classes>
-</test>
+		<classes>
+			<!-- <class name="com.crm.qa.testcase.LoginPageTest">
+			</class> <class name="com.crm.qa.testcase.HomePageTest"></class> -->
+			<class name="com.crm.qa.testcase.ContactsPageTest"></class>
+
+		</classes>
+	</test>
 
 </suite>
 
