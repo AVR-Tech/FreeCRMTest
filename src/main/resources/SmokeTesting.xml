@@ -5,15 +5,16 @@
 
 	<listeners>
 		<listener class-name="com.crm.qa.reports.ExtentReporterNG"></listener>
+		<listener class-name="com.crm.qa.util.CRMTransform"></listener>
 	</listeners>
 
 	<test name="Smoke Test">
 
 		<classes>
-			<!-- <class name="com.crm.qa.testcase.LoginPageTest">
-			</class> <class name="com.crm.qa.testcase.HomePageTest"></class> -->
-			<class name="com.crm.qa.testcase.ContactsPageTest"></class>
-
+			
+			<class name="com.crm.qa.testcase.LoginPageTest"></class>
+			<!-- <class name="com.crm.qa.testcase.HomePageTest"></class>
+			<class name="com.crm.qa.testcase.ContactsPageTest"></class> -->
 		</classes>
 	</test>
 

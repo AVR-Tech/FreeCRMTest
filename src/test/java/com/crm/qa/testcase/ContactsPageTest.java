@@ -1,8 +1,7 @@
 package com.crm.qa.testcase;
 
-
-
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -19,7 +18,7 @@ public class ContactsPageTest extends crmBase {
 	HomePage hp;
 	ContactsPage cp;
 	TestUtil tu;
-	String sheetName="Contacts";
+	String sheetName = "Contacts";
 
 	public ContactsPageTest() {
 		super();
@@ -41,23 +40,25 @@ public class ContactsPageTest extends crmBase {
 	public void verifyContactPageTest() {
 		Assert.assertTrue(cp.verifyContactPage(), "Contact label is missing");
 	}
-
+	@DataProvider
+	public Object[][] getContactData() {
+		Object data[][] = TestUtil.getTestData(sheetName);
+		return data;
+	}
 	@Test(priority = 9)
 	public void selectContactTest() {
 		cp.selectContact("JJ JJ");
 	}
-	
-	@DataProvider
-	public Object[][] getContactData(){
-		Object data[][] = TestUtil.getTestData(sheetName);
-		return data;
-	}
-	
-	@Test (priority = 10, dataProvider="getContactData")
-	public void createContactTest(String titlet, String fnamet, String lnamet, String companyt){
+	@Test(priority = 10, dataProvider = "getContactData")
+	public void createContactTest(String titlet, String fnamet, String lnamet, String companyt) {
 		hp.clickNewContact();
 		cp.createContact(titlet, fnamet, lnamet, companyt);
 		cp.verifyContactPage();
-		
+	}
+	
+
+	@AfterMethod
+	public void closeBrowser() {
+		driver.quit();
 	}
 }

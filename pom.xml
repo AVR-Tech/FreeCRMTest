@@ -11,8 +11,9 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- To skip the test case execution process on maven build -->
 		<maven.test.skip>false</maven.test.skip>
-		
+
 	</properties>
 
 	<build>

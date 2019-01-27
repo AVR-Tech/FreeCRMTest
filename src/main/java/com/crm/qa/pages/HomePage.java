@@ -2,6 +2,7 @@ package com.crm.qa.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -10,6 +11,7 @@ import com.crm.qa.base.crmBase;
 public class HomePage extends crmBase {
 	
 	@FindBy (xpath = "//td[contains(text(),'User: Vimal raj')]")
+	@CacheLookup
 	WebElement logUser;
 	
 	@FindBy (xpath = "//*[@id='navmenu']/ul/li[4]/a")
@@ -21,7 +23,7 @@ public class HomePage extends crmBase {
 	@FindBy (xpath = "//*[@id='navmenu']/ul/li[6]/a")
 	WebElement taskLink;
 	
-	@FindBy (xpath="//td[contains(text(),'User: Vimal raj']")
+	@FindBy (xpath="//td[contains(text(),'User: Vimal raj')]")
 	WebElement verifyName;
 	
 	@FindBy (xpath = "//a[contains(text(),'New Contact')]")
@@ -45,7 +47,7 @@ public class HomePage extends crmBase {
 		return new ContactsPage();
 	}
 	
-	/*public TasksPage clickTasks(){
+	public TasksPage clickTasks(){
 		taskLink.click();
 		return new TasksPage();
 	}
@@ -53,7 +55,7 @@ public class HomePage extends crmBase {
 	public DealsPage clickDeals(){
 		dealLink.click();
 		return new DealsPage();
-	}*/
+	}
 	
 	public void clickNewContact(){
 		Actions move = new Actions(driver);

@@ -49,8 +49,8 @@ public class ContactsPage extends crmBase{
 		firstName.sendKeys(fname);
 		lastName.sendKeys(lname);
 		companyLookup.sendKeys(company);
-		submitBtn.click();		
-	}
+		submitBtn.click();	
+			}
 	
 	
 }

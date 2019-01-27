@@ -10,7 +10,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
-
 import com.crm.qa.util.TestUtil;
 import com.crm.qa.util.WebEventListener;
 
@@ -37,7 +36,7 @@ public class crmBase {
 	}
 
 	public void initialization() {
-		//String browserName = prop.getProperty("browser");
+		// String browserName = prop.getProperty("browser");
 
 		if (prop.getProperty("browser").equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
@@ -53,7 +52,7 @@ public class crmBase {
 		eventListener = new WebEventListener();
 		e_driver.register(eventListener);
 		driver = e_driver;
-		
+
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.page_load, TimeUnit.SECONDS);

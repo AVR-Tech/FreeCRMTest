@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 17, Failures: 5, Errors: 0, Skipped: 9, Time elapsed: 352.682 s <<< FAILURE! - in TestSuite
+validateCRMLogoTest(com.crm.qa.testcase.LoginPageTest)  Time elapsed: 2.305 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.crm.qa.testcase.LoginPageTest.validateCRMLogoTest(LoginPageTest.java:51)
+
+verifyNameTest(com.crm.qa.testcase.HomePageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.crm.qa.testcase.HomePageTest.verifyNameTest(HomePageTest.java:42)
+
+clickContactsTest(com.crm.qa.testcase.HomePageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.crm.qa.testcase.HomePageTest.clickContactsTest(HomePageTest.java:52)
+
+clickDealsTest(com.crm.qa.testcase.HomePageTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.crm.qa.testcase.HomePageTest.clickDealsTest(HomePageTest.java:59)
+
+openBrowser(com.crm.qa.testcase.ContactsPageTest)  Time elapsed: 23.737 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.crm.qa.testcase.ContactsPageTest.openBrowser(ContactsPageTest.java:35)
+

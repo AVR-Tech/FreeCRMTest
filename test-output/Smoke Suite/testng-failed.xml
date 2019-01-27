@@ -3,15 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Smoke Suite]">
   <listeners>
     <listener class-name="com.crm.qa.reports.ExtentReporterNG"/>
+    <listener class-name="com.crm.qa.util.CRMTransform"/>
   </listeners>
   <test name="Smoke Test(failed)">
     <classes>
-      <class name="com.crm.qa.testcase.ContactsPageTest">
+      <class name="com.crm.qa.testcase.LoginPageTest">
         <methods>
+          <include name="closeBrowser"/>
+          <include name="loginTest"/>
+          <include name="validateCRMLogoTest"/>
           <include name="openBrowser"/>
-          <include name="createContactTest" invocation-numbers="0 1 2"/>
         </methods>
-      </class> <!-- com.crm.qa.testcase.ContactsPageTest -->
+      </class> <!-- com.crm.qa.testcase.LoginPageTest -->
     </classes>
   </test> <!-- Smoke Test(failed) -->
 </suite> <!-- Failed suite [Smoke Suite] -->
